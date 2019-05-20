@@ -8,9 +8,9 @@ import (
 
 func TestTranspose(t *testing.T) {
 	data := [][]string{
-		[]string{"a1", "a2", "a3"},
-		[]string{"b1", "b2", "b3"},
-		[]string{"c1", "c2", "c3"},
+		{"a1", "a2", "a3"},
+		{"b1", "b2", "b3"},
+		{"c1", "c2", "c3"},
 	}
 	result := Transpose(data)
 	assert.Len(t, result, 3)
@@ -24,9 +24,9 @@ func TestTranspose(t *testing.T) {
 
 func TestTransposeIrregular(t *testing.T) {
 	data := [][]string{
-		[]string{"a1", "a2", "a3"},
-		[]string{"b1", "b2"},
-		[]string{"c1", "c2", "c3", "c4"},
+		{"a1", "a2", "a3"},
+		{"b1", "b2"},
+		{"c1", "c2", "c3", "c4"},
 	}
 	result := TransposeIrregular(data)
 	assert.Len(t, result, 4)
